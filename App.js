@@ -1,12 +1,12 @@
 import React from 'react';
 import {View} from 'react-native';
-import ListTodo from './Todo/list_todo';
+import Todo from './Todo/add_todo';
 
-//todo make_list
+//todo addTodo_list
 const App = () => {
   return (
     <View>
-      <ListTodo />
+      <Todo />
     </View>
   );
 };
