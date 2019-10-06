@@ -96,7 +96,7 @@ const App = () => {
             style={Style.btnSubmit}
             warning
             onPress={() => editTodoTask(idData)}>
-            <Text style={{color: 'white', fontSize: 20}}>Edit</Text>
+            <Text style={{color: 'white', fontSize: 20}}>Update</Text>
           </Button>
         )}
       </View>
