@@ -14,6 +14,7 @@ const App = () => {
   const [idData, setIdData] = useState(0);
 
   const addTodo = () => {
+    if (input === '') return;
     setTodo(prev => [
       ...prev,
       {id: todo.length + 1, todo: input, isDone: false, edit: false},
@@ -22,6 +23,10 @@ const App = () => {
   };
 
   const deleteTodo = id => {
+    if (isEdit) {
+      alert('Tidak Bisa!');
+      return;
+    }
     setTodo(prev => prev.filter(item => item.id !== id));
   };
 
@@ -36,10 +41,11 @@ const App = () => {
   const editTodo = state => {
     for (let i in todo) {
       if (todo[i].edit !== state.edit) {
-        alert('tidak bisa');
+        alert('Tidak Bisa!');
         return (state.edit = false);
       }
     }
+
     const exist = todo.find(item => state.id === item.id);
     const sameId = todo.indexOf(state);
     setInput(todo[sameId].todo);
@@ -61,6 +67,7 @@ const App = () => {
   };
 
   const editTodoTask = id => {
+    if (input === '') return;
     let objIdx = todo.findIndex(obj => obj.id == id);
     todo[objIdx].todo = input;
     todo[objIdx].edit = false;
