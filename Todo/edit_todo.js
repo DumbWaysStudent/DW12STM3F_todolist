@@ -24,7 +24,7 @@ const App = () => {
 
   const deleteTodo = id => {
     if (isEdit) {
-      alert('Tidak Bisa!');
+      alert('Tidak Bisa Delete!');
       return;
     }
     setTodo(prev => prev.filter(item => item.id !== id));
@@ -41,7 +41,7 @@ const App = () => {
   const editTodo = state => {
     for (let i in todo) {
       if (todo[i].edit !== state.edit) {
-        alert('Tidak Bisa!');
+        alert('Belum Bisa Gan!');
         return (state.edit = false);
       }
     }
