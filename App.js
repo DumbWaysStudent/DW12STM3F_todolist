@@ -1,8 +1,8 @@
 import React from 'react';
 import {View} from 'react-native';
-import Todo from './Todo/done_todo';
+import Todo from './Todo/edit_todo';
 
-//todo DoneTodo_list
+//todo UpdateTodo_list
 const App = () => {
   return (
     <View>
